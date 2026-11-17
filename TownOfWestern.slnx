@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TownOfWestern/TownOfWestern.csproj" />
+  <Project Path="WestAPI/WestAPI.csproj" />
+</Solution>
