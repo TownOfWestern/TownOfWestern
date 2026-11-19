@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 namespace WestAPI;
 
@@ -18,6 +19,19 @@ public class WestAPIMain : BasePlugin
     public override void Load()
     {
         harmony.PatchAll();
+        RegisterModStamp();
+    }
+    static void RegisterModStamp()
+    {
+        SceneManager.add_sceneLoaded(
+            (Action<Scene, LoadSceneMode>)
+            (
+                (scene, mode) =>
+                {
+                    if (scene.name == "MainMenu") ModManager.Instance.ShowModStamp();
+                }
+            )
+        );
     }
 }
 public static class WestAPIInfo
