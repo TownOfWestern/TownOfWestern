@@ -1,7 +1,3 @@
-using BepInEx;
-using BepInEx.Unity.IL2CPP;
-using HarmonyLib;
-using WestAPI;
 
 namespace TownOfWestern;
 
@@ -14,7 +10,8 @@ public class TownOfWesternPlugin : BasePlugin
 
     public override void Load()
     {
-        Log.LogInfo($"TownOfWestern loaded");
+        Dispatcher.Initialize();
         Harmony.PatchAll();
+        Log.LogInfo($"TownOfWestern loaded");
     }
 }

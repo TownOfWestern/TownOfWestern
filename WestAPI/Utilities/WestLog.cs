@@ -17,6 +17,8 @@ public static class WestLog
 
     static WestLog()
     {
+        LogPath = "";
+        _source = null!;
         try { _source = BepInEx.Logging.Logger.CreateLogSource("WestAPI"); }
         catch { }
 
@@ -35,11 +37,34 @@ public static class WestLog
         }
     }
 
+    /// <summary>
+    /// Debug级别日志。
+    /// </summary>
+    /// <param name="msg"></param>
     public static void Debug(string msg) { if (EnableDebug) Write(LogLevel.Debug, msg); }
-    public static void Info(string msg) => Write(LogLevel.Info, msg);
-    public static void Warn(string msg) => Write(LogLevel.Warning, msg);
-    public static void Error(string msg) => Write(LogLevel.Error, msg);
 
+    /// <summary>
+    /// 信息级别日志
+    /// </summary>
+    /// <param name="msg"></param>
+    public static void Info(string msg) => Write(LogLevel.Info, msg);
+
+    /// <summary>
+    /// 警告日志
+    /// </summary>
+    /// <param name="msg"></param>
+    public static void Warn(string msg) => Write(LogLevel.Warning, msg);
+
+    /// <summary>
+    /// 错误日志
+    /// </summary>
+    /// <param name="msg"></param>
+    public static void Error(string msg) => Write(LogLevel.Error, msg);
+    /// <summary>
+    /// 更高级的错误日志
+    /// </summary>
+    /// <param name="ex"></param>
+    /// <param name="msg"></param>
     public static void Error(Exception ex, string msg = null)
         => Write(LogLevel.Error, msg == null ? ex?.ToString() : $"{msg} | {ex}");
 

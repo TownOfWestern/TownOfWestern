@@ -12,11 +12,7 @@
     <DebugType>embedded</DebugType>
     <Configurations>Debug;Release</Configurations>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-	<WarningLevel>4</WarningLevel>
   </PropertyGroup>
-	<PropertyGroup>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AmongUs.GameLibs.Steam" Version="2026.8.18" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.735" Private="false" ExcludeAssets="runtime;native" />

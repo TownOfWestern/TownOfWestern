@@ -1,0 +1,15 @@
+﻿global using BepInEx;
+global using BepInEx.Unity.IL2CPP;
+global using HarmonyLib;
+global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+global using System.Threading.Tasks;
+global using TownOfWestern.Utilities;
+global using WestAPI;
+global using Il2CppInterop.Runtime.Injection;
+global using System.Collections.Concurrent;
+global using UnityEngine;
+global using WestAPI.Utilities;
+global using WestAPI.Events;

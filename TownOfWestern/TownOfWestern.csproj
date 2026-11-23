@@ -11,12 +11,8 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>embedded</DebugType>
     <Configurations>Debug;Release</Configurations>
-	<WarningLevel>4</WarningLevel>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
-	<PropertyGroup>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AmongUs.GameLibs.Steam" Version="2026.8.18" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.735" Private="false" ExcludeAssets="runtime;native" />
@@ -25,6 +21,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WestAPI\WestAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
 
   <!-- Copies the built plugin into the Among Us install when $(AmongUs) is provided, e.g.
